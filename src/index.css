@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+/* Pixiweb Fonts */
+@font-face {
+  font-family: 'Manrope';
+  src: url('/brand/fonts/Manrope-Variable.woff2') format('woff2'),
+       url('/brand/fonts/Manrope-Variable.ttf') format('truetype');
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/brand/fonts/InstrumentSerif-Italic.woff2') format('woff2'),
+       url('/brand/fonts/InstrumentSerif-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --color-pixi-black: #000000;
+  --color-pixi-white: #ffffff;
+  --color-pixi-violet: #7d39eb;
+  --color-pixi-violet-hover: #5a4be0;
+  --color-pixi-lime: #c6ff33;
+  --color-pixi-lavender: #b9a0ff;
+  --color-pixi-mist: #e8e8ea;
+  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+}
+
+@layer base {
+  body {
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .font-serif {
+    font-family: 'Instrument Serif', Georgia, serif;
+  }
+
+  code, kbd, samp, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+:root {
+  /* Pixiweb Official Design Tokens */
+  --black: #000000;
+  --white: #ffffff;
+  --violet: #7d39eb;
+  --violet-2: #5a4be0;
+  --lime: #c6ff33;
+  --mist: #e8e8ea;
+  --lavender: #b9a0ff;
+
+  /* RGB channels for alpha blending: rgb(var(--w) / .14) */
+  --k: 0 0 0;
+  --w: 255 255 255;
+  --violet-ch: 125 57 235;
+  --violet-2-ch: 90 75 224;
+  --lime-ch: 198 255 51;
+
+  --blur-s: 5px;
+  --blur-l: 15px;
+  --r-s: 16px;
+  --r-m: 24px;
+  --r-l: 40px;
+  --r-pill: 999px;
+
+  /* Semantics */
+  --fg: var(--white);
+  --muted: rgb(var(--w) / .72);
+  --line: rgb(var(--w) / .14);
+  --surface: rgb(var(--w) / .05);
+  --surface-glass: rgb(var(--w) / .08);
+  --surface-glass-hover: rgb(var(--w) / .14);
+  --border-glass: rgb(var(--w) / .24);
+  --focus: var(--lime);
+  --accent: var(--lime);
+  --em: var(--lavender);
+
+  /* Legacy aliases for backwards compatibility */
+  --pixi-black: var(--black);
+  --pixi-white: var(--white);
+  --pixi-violet: var(--violet);
+  --pixi-violet-2: var(--violet-2);
+  --pixi-lime: var(--lime);
+  --pixi-lavender: var(--lavender);
+  --pixi-mist: var(--mist);
+  --pixi-surface: var(--surface);
+  --pixi-surface-glass: var(--surface-glass);
+  --pixi-surface-glass-hover: var(--surface-glass-hover);
+  --pixi-line: var(--line);
+  --pixi-border-glass: var(--border-glass);
+  --pixi-border-input: rgba(255, 255, 255, 0.35);
+  --pixi-surface-input: rgba(0, 0, 0, 0.55);
+}
+
+/* Custom scrollbars with Pixiweb dark aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7d39eb;
+}
+
+/* Visible elegant scrollbar for kanban columns and lists */
+.kanban-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(185, 160, 255, 0.5) rgba(255, 255, 255, 0.05);
+}
+
+.kanban-scrollbar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.kanban-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  margin: 4px 0;
+}
+
+.kanban-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(185, 160, 255, 0.45);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kanban-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7d39eb;
+}
+
+/* Dedicated Clean Print Styles for Dossier PDF Export */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .print-card {
+    border: 1px solid #cbd5e1 !important;
+    background-color: #f8fafc !important;
+    color: #000000 !important;
+    page-break-inside: avoid;
+  }
+}

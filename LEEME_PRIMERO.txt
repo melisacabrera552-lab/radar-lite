@@ -1,0 +1,42 @@
+================================================================================
+RADAR LITE · BUSCADOR Y AUDITOR DE PROSPECTOS B2B
+================================================================================
+
+¡Bienvenido! Sigue estos 3 pasos para ponerlo en marcha en tu computadora:
+
+--------------------------------------------------------------------------------
+PASO 1: INSTALAR NODE.JS (Si aún no lo tienes)
+--------------------------------------------------------------------------------
+Descarga e instala gratis la versión LTS recomendada desde:
+https://nodejs.org/ (Botón verde "LTS")
+
+--------------------------------------------------------------------------------
+PASO 2: INICIAR LA APLICACIÓN (1 solo clic)
+--------------------------------------------------------------------------------
+- En Windows: Haz doble clic en "iniciar.bat"
+- En Mac/Linux: Abre la terminal en esta carpeta y ejecuta: bash iniciar.sh
+
+La app abrirá automáticamente tu navegador en: http://localhost:3000
+
+--------------------------------------------------------------------------------
+PASO 3: CONECTAR TUS PROPIAS CREDENCIALES DE GOOGLE
+--------------------------------------------------------------------------------
+Dentro de la aplicación, ve al menú lateral "⚙️ Ajustes" y carga tus 2 claves:
+
+1) CLAVE DE GEMINI AI (Gratuita · Requerida):
+   - Entra a: https://aistudio.google.com/apikey
+   - Crea tu API key gratuita y pégala en Ajustes -> Clave de Gemini.
+
+2) CLAVE DE GOOGLE CLOUD (Places API New + PageSpeed Insights):
+   - Entra a: https://console.cloud.google.com/
+   - Crea un proyecto y habilita las APIs:
+     * Places API (New)
+     * PageSpeed Insights API
+   - Crea una API Key en "Credenciales" y pégala en Ajustes -> Clave de Google Cloud.
+
+¡Listo! Personaliza tu nombre y teléfono en "Perfil de Vendedor" y ya puedes
+empezar a buscar negocios y auditar prospectos.
+
+Para ver la guía completa con todos los detalles, abre el archivo README.md
+o haz clic en el botón "Manual" dentro de la barra lateral de la aplicación.
+================================================================================

@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+dist-package/
+data/
+server.mjs
+coverage/
+.DS_Store
+*.log
+*.zip
+.env*
+!.env.example
